@@ -5,16 +5,18 @@ public class Hasil {
     private final String nama_batik;
     private final String daerah_batik;
     private final String makna_batik;
+    private final String link_batik;
     private final int harga_rendah;
     private final int harga_tinggi;
 
-    public Hasil(int id, String nama_batik, String daerah_batik, String makna_batik, int harga_rendah, int harga_tinggi) {
+    public Hasil(int id, String nama_batik, String daerah_batik, String makna_batik, int harga_rendah, int harga_tinggi,String link_batik) {
         this.id = id;
         this.nama_batik = nama_batik;
         this.daerah_batik = daerah_batik;
         this.makna_batik = makna_batik;
         this.harga_rendah = harga_rendah;
         this.harga_tinggi = harga_tinggi;
+        this.link_batik = link_batik;
     }
 
     public int getId() {
@@ -39,5 +41,9 @@ public class Hasil {
 
     public int getHarga_tinggi() {
         return harga_tinggi;
+    }
+
+    public String getLink_batik(){
+        return link_batik;
     }
 }

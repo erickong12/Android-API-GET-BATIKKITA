@@ -3,6 +3,11 @@
     <string name="tertinggi">tertinggi</string>
     <string name="terendah">terendah</string>
     <string name="daerah">daerah</string>
-    <string name="nama">Nama</string>
     <string name="id">Id</string>
+    <string name="nama">Nama</string>
+    <string name="makna">Makna</string>
+    <string name="min">Min</string>
+    <string name="max">Max</string>
+    <string name="back">Back</string>
+    <string name="todo">TODO</string>
 </resources>

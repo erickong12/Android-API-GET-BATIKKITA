@@ -15,49 +15,49 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Id"
+        android:text="@string/id"
         android:textSize="20sp"/>
     <TextView
         android:id="@+id/tNama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Nama"
         android:layout_below="@id/tId"
+        android:text="@string/nama"
         android:textSize="20sp"/>
     <TextView
         android:id="@+id/tDaerah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Daerah"
         android:layout_below="@id/tNama"
+        android:text="@string/daerah"
         android:textSize="20sp"/>
     <TextView
         android:id="@+id/tMakna"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tDaerah"
         android:layout_marginTop="10dp"
-        android:text="Makna"
+        android:layout_below="@id/tDaerah"
+        android:scrollbars = "vertical"
+        android:text="@string/makna"
         android:textSize="20sp"/>
     <TextView
         android:id="@+id/tMin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Min"
         android:layout_below="@id/tMakna"
+        android:text="@string/min"
         android:textSize="20sp"/>
     <TextView
         android:id="@+id/tMax"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Max"
         android:layout_below="@id/tMin"
+        android:text="@string/max"
         android:textSize="20sp"/>
-
     <LinearLayout
         android:id="@+id/Linearlayout2"
         android:layout_width="wrap_content"
@@ -66,11 +66,12 @@
         android:layout_below="@+id/tMax"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        tools:ignore="NotSibling">
         <Button
             android:id="@+id/btBackGo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Back"/>
+            android:text="@string/back"/>
     </LinearLayout>
 </RelativeLayout>

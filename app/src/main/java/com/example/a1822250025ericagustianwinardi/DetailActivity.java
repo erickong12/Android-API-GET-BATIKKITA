@@ -1,16 +1,20 @@
 package com.example.a1822250025ericagustianwinardi;
 //eric agustian winardi 1822250025
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DetailActivity extends AppCompatActivity {
     TextView Id, Name, daerah,makna,tmin,tmax;
     Button btBack;
 
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

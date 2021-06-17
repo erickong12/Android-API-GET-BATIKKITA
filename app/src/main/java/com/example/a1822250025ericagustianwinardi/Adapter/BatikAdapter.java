@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,7 @@ import com.example.a1822250025ericagustianwinardi.Model.Hasil;
 import com.example.a1822250025ericagustianwinardi.R;
 
 import java.util.List;
+import com.squareup.picasso.Picasso;
 
 public class BatikAdapter extends RecyclerView.Adapter<BatikAdapter.MyViewHolder>{
     List<Hasil> list;
@@ -39,6 +41,7 @@ public class BatikAdapter extends RecyclerView.Adapter<BatikAdapter.MyViewHolder
         holder.textDaerah.setText("Daerah = " + list.get(position).getDaerah_batik());
         holder.textMin.setText("Terendah = " + list.get(position).getHarga_rendah());
         holder.textMax.setText("Tertinggi = " + list.get(position).getHarga_tinggi());
+        Picasso.get().load(list.get(position).getLink_batik()).into(holder.iv);
         holder.itemView.setOnClickListener(view -> {
             Intent mIntent = new Intent(view.getContext(), DetailActivity.class);
             mIntent.putExtra("Id", list.get(position).getId());
@@ -58,6 +61,7 @@ public class BatikAdapter extends RecyclerView.Adapter<BatikAdapter.MyViewHolder
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView textId, textName, textDaerah,textMin,textMax;
+        public ImageView iv;
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -66,6 +70,7 @@ public class BatikAdapter extends RecyclerView.Adapter<BatikAdapter.MyViewHolder
             textDaerah = itemView.findViewById(R.id.tvDaerah);
             textMin = itemView.findViewById(R.id.tvMin);
             textMax = itemView.findViewById(R.id.tvMax);
+            iv = itemView.findViewById(R.id.iv);
         }
     }
 }
